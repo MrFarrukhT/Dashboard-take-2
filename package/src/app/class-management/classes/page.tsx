@@ -246,13 +246,7 @@ const Classes = () => {
                         label={student.paymentStatus}
                         size="small"
                         sx={{ fontSize: '0.9rem' }}
-                        color={
-                          student.paymentStatus === 'paid'
-                            ? 'success'
-                            : student.paymentStatus === 'pending'
-                            ? 'warning'
-                            : 'error'
-                        }
+                        color={student.paymentStatus === 'paid' ? 'success' : 'error'}
                       />
                     </Box>
                   </Grid>
