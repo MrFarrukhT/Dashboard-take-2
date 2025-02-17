@@ -43,9 +43,7 @@ const Students = () => {
     switch (status) {
       case 'paid':
         return 'success';
-      case 'pending':
-        return 'warning';
-      case 'overdue':
+      case 'unpaid':
         return 'error';
       default:
         return 'default';
@@ -100,7 +98,7 @@ const Students = () => {
         phone: studentData.phone!,
         joinDate: studentData.joinDate!,
         status: studentData.status || 'active',
-        paymentStatus: 'pending',
+        paymentStatus: 'unpaid',
       };
       setStudents((prevStudents) => [...prevStudents, newStudent]);
       showNotification('Student added successfully', 'success');

@@ -17,7 +17,7 @@ export interface Student {
   phone: string;
   joinDate: string;
   status: 'active' | 'inactive';
-  paymentStatus: 'paid' | 'pending' | 'overdue';
+  paymentStatus: 'paid' | 'unpaid';
 }
 
 export interface Class {
@@ -75,7 +75,7 @@ export const mockStudents: Student[] = [
     phone: '+1234567891',
     joinDate: '2024-01-20',
     status: 'active',
-    paymentStatus: 'pending',
+    paymentStatus: 'unpaid',
   },
   {
     id: '3',
@@ -93,7 +93,7 @@ export const mockStudents: Student[] = [
     phone: '+1234567893',
     joinDate: '2024-02-01',
     status: 'active',
-    paymentStatus: 'overdue',
+    paymentStatus: 'unpaid',
   },
 ];
 

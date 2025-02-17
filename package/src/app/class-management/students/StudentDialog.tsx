@@ -61,7 +61,7 @@ const StudentDialog: React.FC<StudentDialogProps> = ({
     onSave({
       ...formData,
       joinDate: formData.joinDate || new Date().toISOString().split('T')[0],
-      paymentStatus: formData.paymentStatus || 'pending', // Default payment status for new students
+      paymentStatus: formData.paymentStatus || 'unpaid', // Default payment status for new students
     });
   };
 
@@ -117,13 +117,7 @@ const StudentDialog: React.FC<StudentDialogProps> = ({
               <Box sx={{ mt: 2 }}>
                 <Chip
                   label={`Payment Status: ${formData.paymentStatus}`}
-                  color={
-                    formData.paymentStatus === 'paid'
-                      ? 'success'
-                      : formData.paymentStatus === 'pending'
-                      ? 'warning'
-                      : 'error'
-                  }
+                  color={formData.paymentStatus === 'paid' ? 'success' : 'error'}
                   sx={{ width: '100%', height: 32 }}
                 />
               </Box>
