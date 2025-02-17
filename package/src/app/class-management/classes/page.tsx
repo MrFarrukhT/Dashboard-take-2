@@ -243,10 +243,10 @@ const Classes = () => {
                         <Typography color="textSecondary">{student.phone}</Typography>
                       </Box>
                       <Chip
-                        label={student.paymentStatus}
+                        label={student.paymentStatus === 'paid' ? 'Paid' : 'Unpaid'}
                         size="small"
-                        sx={{ fontSize: '0.9rem' }}
                         color={student.paymentStatus === 'paid' ? 'success' : 'error'}
+                        sx={{ fontSize: '0.9rem' }}
                       />
                     </Box>
                   </Grid>
